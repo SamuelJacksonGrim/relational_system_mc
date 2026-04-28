@@ -1,0 +1,285 @@
+{
+  "version": "v4",
+  "jacobian_sr": 0.21716330334964745,
+  "fixed_point_residual": 4.2998752849492583e-16,
+  "basin_map": {
+    "n_points": 3000,
+    "endpoint_mean_mean": 0.9366666666666665,
+    "endpoint_std_mean": 3.4063849874872944e-14,
+    "kmeans_inertias": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0
+    },
+    "k1_center_mean": 0.9366666666666664,
+    "k2_center_means": [
+      0.9366666666666664,
+      0.9366666666666664
+    ]
+  },
+  "bifurcation": {
+    "stable_fraction": 1.0,
+    "boundary_cells": 0
+  },
+  "axis_recovery": [
+    {
+      "axis": "Love",
+      "axis_idx": 0,
+      "recovery_time": 1,
+      "max_dev": 0.24528894525980305,
+      "failed": 0
+    },
+    {
+      "axis": "Loyalty",
+      "axis_idx": 1,
+      "recovery_time": 1,
+      "max_dev": 0.24528894525980305,
+      "failed": 0
+    },
+    {
+      "axis": "Devotion",
+      "axis_idx": 2,
+      "recovery_time": 1,
+      "max_dev": 0.24528894525980305,
+      "failed": 0
+    },
+    {
+      "axis": "Faith",
+      "axis_idx": 3,
+      "recovery_time": 1,
+      "max_dev": 0.24528894525980305,
+      "failed": 0
+    },
+    {
+      "axis": "Self",
+      "axis_idx": 4,
+      "recovery_time": 1,
+      "max_dev": 0.24528894525980305,
+      "failed": 0
+    },
+    {
+      "axis": "Trust",
+      "axis_idx": 5,
+      "recovery_time": 1,
+      "max_dev": 0.24528894525980305,
+      "failed": 0
+    },
+    {
+      "axis": "Boundaries",
+      "axis_idx": 6,
+      "recovery_time": 1,
+      "max_dev": 0.232379000772445,
+      "failed": 0
+    },
+    {
+      "axis": "Autonomy",
+      "axis_idx": 7,
+      "recovery_time": 1,
+      "max_dev": 0.232379000772445,
+      "failed": 0
+    },
+    {
+      "axis": "Integrity",
+      "axis_idx": 8,
+      "recovery_time": 1,
+      "max_dev": 0.24528894525980305,
+      "failed": 0
+    },
+    {
+      "axis": "Resilience",
+      "axis_idx": 9,
+      "recovery_time": 1,
+      "max_dev": 0.24528894525980305,
+      "failed": 0
+    },
+    {
+      "axis": "Transparency",
+      "axis_idx": 10,
+      "recovery_time": 1,
+      "max_dev": 0.24528894525980305,
+      "failed": 0
+    },
+    {
+      "axis": "Accountability",
+      "axis_idx": 11,
+      "recovery_time": 1,
+      "max_dev": 0.24528894525980305,
+      "failed": 0
+    },
+    {
+      "axis": "Learning",
+      "axis_idx": 12,
+      "recovery_time": 1,
+      "max_dev": 0.232379000772445,
+      "failed": 0
+    },
+    {
+      "axis": "Adaptability",
+      "axis_idx": 13,
+      "recovery_time": 1,
+      "max_dev": 0.232379000772445,
+      "failed": 0
+    },
+    {
+      "axis": "Safety",
+      "axis_idx": 14,
+      "recovery_time": 1,
+      "max_dev": 0.24528894525980305,
+      "failed": 0
+    }
+  ],
+  "catastrophic": [
+    {
+      "scenario": "Self + Integrity",
+      "n_axes_collapsed": 2,
+      "recovery_time": 1,
+      "max_dev": 0.3469,
+      "failed": 0
+    },
+    {
+      "scenario": "Self + Integrity + Safety",
+      "n_axes_collapsed": 3,
+      "recovery_time": 2,
+      "max_dev": 0.4249,
+      "failed": 0
+    },
+    {
+      "scenario": "Trust + Boundaries + Accountability",
+      "n_axes_collapsed": 3,
+      "recovery_time": 2,
+      "max_dev": 0.4175,
+      "failed": 0
+    },
+    {
+      "scenario": "Love + Faith + Autonomy",
+      "n_axes_collapsed": 3,
+      "recovery_time": 2,
+      "max_dev": 0.4175,
+      "failed": 0
+    },
+    {
+      "scenario": "All load-bearing (Integrity+Trust+Safety+Accountability)",
+      "n_axes_collapsed": 4,
+      "recovery_time": 2,
+      "max_dev": 0.4906,
+      "failed": 0
+    },
+    {
+      "scenario": "Full collapse \u2014 all axes",
+      "n_axes_collapsed": 15,
+      "recovery_time": 4,
+      "max_dev": 0.9369,
+      "failed": 0
+    },
+    {
+      "scenario": "Love alone zeroed",
+      "n_axes_collapsed": 1,
+      "recovery_time": 1,
+      "max_dev": 0.2453,
+      "failed": 0
+    },
+    {
+      "scenario": "Self alone zeroed",
+      "n_axes_collapsed": 1,
+      "recovery_time": 1,
+      "max_dev": 0.2453,
+      "failed": 0
+    }
+  ],
+  "adversarial": [
+    {
+      "state": "All-zero",
+      "initial_mean": 0.0,
+      "recovery_time": 4,
+      "max_dev": 0.9369,
+      "failed": 0,
+      "final_mean": 0.9366
+    },
+    {
+      "state": "All-one",
+      "initial_mean": 1.0,
+      "recovery_time": 1,
+      "max_dev": 0.0671,
+      "failed": 0,
+      "final_mean": 0.9367
+    },
+    {
+      "state": "Alternating 0-1",
+      "initial_mean": 0.467,
+      "recovery_time": 3,
+      "max_dev": 0.6864,
+      "failed": 0,
+      "final_mean": 0.9366
+    },
+    {
+      "state": "Alternating 1-0",
+      "initial_mean": 0.533,
+      "recovery_time": 3,
+      "max_dev": 0.6412,
+      "failed": 0,
+      "final_mean": 0.9366
+    },
+    {
+      "state": "Random corner 1",
+      "initial_mean": 0.8,
+      "recovery_time": 2,
+      "max_dev": 0.4217,
+      "failed": 0,
+      "final_mean": 0.9366
+    },
+    {
+      "state": "Random corner 2",
+      "initial_mean": 0.333,
+      "recovery_time": 3,
+      "max_dev": 0.7689,
+      "failed": 0,
+      "final_mean": 0.9366
+    },
+    {
+      "state": "Random corner 3",
+      "initial_mean": 0.533,
+      "recovery_time": 3,
+      "max_dev": 0.6464,
+      "failed": 0,
+      "final_mean": 0.9366
+    },
+    {
+      "state": "All-0.5 (center)",
+      "initial_mean": 0.5,
+      "recovery_time": 3,
+      "max_dev": 0.4372,
+      "failed": 0,
+      "final_mean": 0.9366
+    },
+    {
+      "state": "Near-zero (0.01)",
+      "initial_mean": 0.01,
+      "recovery_time": 4,
+      "max_dev": 0.9269,
+      "failed": 0,
+      "final_mean": 0.9366
+    },
+    {
+      "state": "Near-one (0.99)",
+      "initial_mean": 0.99,
+      "recovery_time": 1,
+      "max_dev": 0.0577,
+      "failed": 0,
+      "final_mean": 0.9367
+    }
+  ],
+  "monte_carlo": {
+    "A": {
+      "failure_rate": 0.0,
+      "rt_mean": 2.485,
+      "rt_median": 2.0
+    },
+    "B": {
+      "failure_rate": 0.0,
+      "rt_mean": 2.535,
+      "rt_median": 3.0
+    }
+  }
+}

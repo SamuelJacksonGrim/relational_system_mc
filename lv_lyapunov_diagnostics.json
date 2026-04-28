@@ -1,0 +1,67 @@
+{
+  "lyapunov": {
+    "jacobian_sr": 0.21716330334964745,
+    "P_positive_def": true,
+    "P_min_eig": 1.0003542292833292,
+    "P_max_eig": 1.0566421615777655,
+    "P_condition_number": 1.0562680005209375,
+    "certificate_frac": 1.0
+  },
+  "fm1_degradation": {
+    "Love": {
+      "final_V": 1.4504290273865214e-07,
+      "dV_zero_crossing": -1,
+      "final_axis_val": 0.9500885698846757
+    },
+    "Self": {
+      "final_V": 2.0266176726396156e-07,
+      "dV_zero_crossing": -1,
+      "final_axis_val": 0.9500822051363171
+    },
+    "Trust": {
+      "final_V": 2.049885212045227e-07,
+      "dV_zero_crossing": -1,
+      "final_axis_val": 0.9500816483415352
+    },
+    "Integrity": {
+      "final_V": 2.2317238506945866e-07,
+      "dV_zero_crossing": -1,
+      "final_axis_val": 0.9500795797937766
+    },
+    "Transparency": {
+      "final_V": 1.8564741819067424e-07,
+      "dV_zero_crossing": -1,
+      "final_axis_val": 0.9500841081797443
+    },
+    "Accountability": {
+      "final_V": 2.1553841111795748e-07,
+      "dV_zero_crossing": -1,
+      "final_axis_val": 0.9500805215492796
+    },
+    "Safety": {
+      "final_V": 2.2215686560791945e-07,
+      "dV_zero_crossing": -1,
+      "final_axis_val": 0.9500797709230858
+    }
+  },
+  "fm2_erosion": {
+    "final_fp_mean": 0.7039264615618805,
+    "final_V_nominal": 0.8451167730184878,
+    "P_always_pd": true,
+    "final_attractor_gap": 0.922396650198798
+  },
+  "fm3_asymmetry": {
+    "targeted": {
+      "final_sr": 0.19593497620979144,
+      "final_P_pd": true,
+      "final_max_asym": 0.8492599999999877,
+      "final_fp_mean": 0.9366666666666664
+    },
+    "random": {
+      "final_sr": 0.27621702270167314,
+      "final_P_pd": true,
+      "final_max_asym": 0.3401277014676859,
+      "final_fp_mean": 0.9366666666666664
+    }
+  }
+}
