@@ -1,9 +1,0 @@
-scenario,n_axes_collapsed,recovery_time,max_dev,failed
-Self + Integrity,2,1,0.3469,0
-Self + Integrity + Safety,3,2,0.4249,0
-Trust + Boundaries + Accountability,3,2,0.4175,0
-Love + Faith + Autonomy,3,2,0.4175,0
-All load-bearing (Integrity+Trust+Safety+Accountability),4,2,0.4906,0
-Full collapse — all axes,15,4,0.9369,0
-Love alone zeroed,1,1,0.2453,0
-Self alone zeroed,1,1,0.2453,0
