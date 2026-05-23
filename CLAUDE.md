@@ -4,6 +4,10 @@
 
 Research and formal analysis, not production code. This is where the mathematical properties of the relational dynamics were proven, not where they run. Production execution is in sovereign_manifold.
 
+## Why the math matters
+
+The 15 nodes aren't arbitrary labels. Love, Trust, Autonomy, Boundaries, Safety are named relational constructs modeled as mathematical objects. The proof here establishes that a system built around those constructs has a single global attractor, recovers from total collapse in 4 steps, and contracts uniformly in all directions (P condition number 1.056). That's what makes sovereign_manifold's relational dynamics trustworthy rather than just plausible. The DRA modes (GENERATOR / OBSERVER / WATCHER) that sovereign_manifold uses at runtime are observational labels over a system that this repository proves has no stable failure states.
+
 ## The constants here are authoritative
 
 K_SCALE, S_STAR, and ALPHA_LEAK values were derived by running this codebase's Lyapunov analysis. If sovereign_manifold's constants ever drift from the values here, this repo is correct — sovereign_manifold is out of sync.
@@ -31,7 +35,7 @@ The Lyapunov P matrix should remain near-isotropic (condition number < 2.0). A c
 
 ## Adversarial states
 
-`v4_adversarial_states.csv` documents tested configurations where one or more nodes are initialized far from S*. All tested configurations recover — this is the GAS guarantee. The recovery time varies: Safety recovers slowest (highest row-sum in A_MATRIX), Autonomy recovers second-slowest.
+`v4_adversarial_states.csv` documents tested configurations where one or more nodes are initialized far from S*. All tested configurations recover — this is the GAS guarantee. The recovery time varies across test regimes: Safety recovers slowest (highest row-sum in A_MATRIX), Autonomy recovers second-slowest.
 
 ## This repo has no runtime dependencies
 

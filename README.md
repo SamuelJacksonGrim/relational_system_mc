@@ -6,6 +6,20 @@ This is a **standalone analysis tool** — no dependencies on any other Resonanc
 
 ---
 
+## What this proves
+
+The 15 nodes are named after relational psychology constructs — Love, Trust, Autonomy, Boundaries, Safety — not as metaphor but as mathematical objects with formal properties. This repository proves that a system built around those constructs:
+
+- Has exactly **one attractor** in the entire [0,1]¹⁵ state space — no false attractors, no limit cycles
+- Recovers from **total collapse** (all 15 nodes to zero) in **4 steps**
+- Recovers from **any single-node hard collapse** in **1 step**
+- Has a **100% certificate fraction** — every point in state space contracts toward S*
+- Shows **no failures** across 3000 random initializations and 800 Monte Carlo trials
+
+The spectral radius (0.2172) and the P condition number (1.056) aren't just technical metrics — they mean the system contracts uniformly in all directions, with no preferred axis of attack. Relational identity, modeled this way, is structurally robust.
+
+---
+
 ## Repository contents
 
 | File | Role |
@@ -192,7 +206,7 @@ Multiple nodes simultaneously collapsed (set to 0):
 | Love alone zeroed | 1 | 1 step | 0.2453 | No |
 | Self alone zeroed | 1 | 1 step | 0.2453 | No |
 
-**Even a full collapse of all 15 nodes to zero recovers within 4 steps with zero failures.** This is the most adversarial possible state for a [0,1]¹⁵ system.
+**Even a full collapse of all 15 nodes to zero recovers within 4 steps with zero failures.**
 
 ### Adversarial state tests
 
@@ -209,7 +223,7 @@ Multiple nodes simultaneously collapsed (set to 0):
 | Near-zero (0.01) | 0.01 | 4 steps | 0.9269 | 0.9366 |
 | Near-one (0.99) | 0.99 | 1 step | 0.0577 | 0.9367 |
 
-All 10 adversarial initializations converge to the same fixed point (mean 0.9366–0.9367). Recovery from the worst case (near-zero, 0.01) takes 4 steps. Recovery from near-one (0.99) takes 1 step — the system overshoots S* by only 6.7% and snaps back in a single step.
+All 10 adversarial initializations converge to the same fixed point. Recovery from the worst case (near-zero) takes 4 steps.
 
 ### Bifurcation scan
 
@@ -250,6 +264,14 @@ A_RAW   = ...   # same 15×15 matrix defined in relational_system_lyapunov.py
 
 `sovereign_manifold.py` re-derives the certificate at startup via `build_lyapunov_P(build_jacobian(...))` and prints `P_IS_PD`. If this prints `False`, the constants have drifted and the GAS guarantee is void.
 
+The runtime state of this system directly drives sovereign_manifold's **DRA (Dynamical Regime Assessment) mode**, which classifies the current relational state by dissonance from S*:
+
+- **GENERATOR** (dissonance < 0.30) — system operating well within the attractor basin; typical steady state
+- **OBSERVER** (0.30–0.70) — moderate perturbation, system in active recovery
+- **WATCHER** (> 0.70) — high dissonance, system near the edge of the basin
+
+The GAS certificate guarantees that even WATCHER-mode conditions resolve — the worst-case adversarial state (all-zero, dissonance ≈ 0.94) recovers in 4 steps. The DRA modes are observational labels over a dynamics system that has no stable failure states.
+
 **If you change A_RAW or K_SCALE in sovereign_manifold**, re-run `relational_system_lyapunov.py` here to verify the certificate holds before committing.
 
 ---
@@ -259,10 +281,10 @@ A_RAW   = ...   # same 15×15 matrix defined in relational_system_lyapunov.py
 ```bash
 pip install numpy scipy matplotlib seaborn pandas
 
-# Lyapunov certificate + failure modes (generates lv_*.png and lv_lyapunov_diagnostics.json)
+# Lyapunov certificate + failure modes
 python relational_system_lyapunov.py
 
-# Full Monte Carlo suite (generates v4_*.png, v4_*.csv, v4_diagnostics_v4.json)
+# Full Monte Carlo suite
 python relational_system_mc_v4.py
 ```
 
