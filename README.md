@@ -5,6 +5,15 @@
 [![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)](https://www.python.org)
 ![status](https://img.shields.io/badge/status-research-success)
 
+## License
+
+This project is dual-licensed under **AGPL-3.0-only** OR a commercial license.
+
+- [LICENSE](LICENSE) — GNU AGPL-3.0-only (the free track)
+- [LICENSING.md](LICENSING.md) — how the two tracks work
+- [COMMERCIAL-LICENSE.md](COMMERCIAL-LICENSE.md) — the commercial agreement
+- [NOTICE](NOTICE) — copyright, SPDX identifier, and provenance
+
 
 The mathematical research layer underlying the Resonance Family's relational dynamics engine. This repository contains the Python simulations, Lyapunov certificate derivation, bifurcation scans, adversarial and catastrophic state testing, failure mode analysis, and visualization outputs that produced the constants and stability guarantees used in `sovereign_manifold`.
 
@@ -298,6 +307,3 @@ Outputs are written to `./lyapunov_results/` (from `relational_system_lyapunov.p
 
 ---
 
-## License
-
-Apache 2.0 — Samuel Jackson Grim
